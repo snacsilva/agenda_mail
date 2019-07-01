@@ -1,3 +1,4 @@
+![agenda-edu](https://user-images.githubusercontent.com/2385859/60444694-11889500-9bf4-11e9-9e9b-cc1e10fe173a.gif)
 
 #### Bem-vindo ao desafio
 
