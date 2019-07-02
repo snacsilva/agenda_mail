@@ -8,7 +8,7 @@ O objetivo é criar uma API já para uma aplicação de envio de mensagens.
 
 #### Requisitos
 
-- Criar endpoints da [API](#api)
+- Criar endpoints da API: https://github.com/agendakids/desafio-backend-rails/blob/master/README.md#api
 - Ter uma boa cobertura de código
 - Organizar estrutura do projeto utilizando padrões de projetos
 
