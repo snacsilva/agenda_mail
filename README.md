@@ -8,7 +8,7 @@ O objetivo é criar uma API já para uma aplicação de envio de mensagens.
 
 #### Requisitos
 
-- Criar endpoints da API
+- Criar endpoints da [API](#api)
 - Ter uma boa cobertura de código
 - Organizar estrutura do projeto utilizando padrões de projetos
 
@@ -17,7 +17,7 @@ O objetivo é criar uma API já para uma aplicação de envio de mensagens.
 - Organização do projeto: Avalia a estrutura do projeto, documentação e uso de controle de versão;
 - Coerência: Avalia se os requisitos foram atendidos;
 - Boas práticas: Avalia se o projeto segue boas práticas de desenvolvimento, incluindo segurança e otimização;
-- Controle de Qualidade: Avalia se o projeto possui qualidade assegurada por testes automatizados(RSpec, Minitest, Jest, Mocha, Jasmine) e integração contínua (por exemplo Circle Ci).
+- Controle de Qualidade: Avalia se o projeto possui qualidade assegurada por testes automatizados(RSpec) e integração contínua (por exemplo Circle Ci).
 
 #### Requisitos bônus
 
