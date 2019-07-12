@@ -4,7 +4,7 @@
 
 Estamos muito felizes que você tenha chegado nessa etapa do nosso processo seletivo, para essa fase, desejamos que você resolva um desafio.
 
-O objetivo é criar uma API já para uma aplicação já existente de envio de mensagens.
+O objetivo é criar uma API para uma aplicação já existente de envio de mensagens.
 
 #### Requisitos
 
