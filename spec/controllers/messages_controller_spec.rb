@@ -84,11 +84,6 @@ RSpec.describe MessagesController, type: :controller do
         expect(assigns(:messages).size).to eq(2)
       end
     end
-
-
-
-
-
   end
 
   describe '#show' do
