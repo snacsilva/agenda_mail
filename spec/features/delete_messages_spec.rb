@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'phantomjs/poltergeist'
 
 feature 'Check Messages' do
 

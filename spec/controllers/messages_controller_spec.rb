@@ -191,14 +191,14 @@ RSpec.describe MessagesController, type: :controller do
       expect(assigns(:messages)).to eq [message1]
     end
   end
-end
 
-def create_message
-  post :create, params:
-        {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem', receiver_email: user1.email}}
-end
+  def create_message
+    post :create, params:
+          {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem', receiver_email: user1.email}}
+  end
 
-def create_invalid_message
-  post :create, params:
-        {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem'}}
+  def create_invalid_message
+    post :create, params:
+          {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem'}}
+  end
 end

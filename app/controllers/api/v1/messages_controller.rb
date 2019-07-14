@@ -51,7 +51,7 @@ class Api::V1::MessagesController < ApplicationController
     def archive
         @message = Message.find(params[:id])
         if @message.archived? || @message.receiver != @user
-            render json: {erro: 'Mensagem já arquivada, Permissão Negada'}, status: 401
+            render json: {erro: 'Mensagem já arquivada ou usuário não pode arquivar mensagem, Permissão Negada'}, status: 401
         else
             @message.archived! if (@message.receiver == @user || @user.try(:master?))
             respond_to do |format|

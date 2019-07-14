@@ -51,6 +51,7 @@ group :development, :test do
   gem 'pry'
   gem 'better_errors'
   gem 'rails-controller-testing'
+  gem 'phantomjs'
 end
 
 group :development do
