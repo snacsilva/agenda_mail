@@ -2,6 +2,7 @@ class Api::V1::UsersController < ApplicationController
   protect_from_forgery with: :null_session
   before_action :validate_token
   before_action :validate_permission, only: [:update]
+  before_action :set_user, except: [:index]
 
   # [API] update user info
   # [PATCH] /api/v1/users/:id
@@ -35,8 +36,8 @@ class Api::V1::UsersController < ApplicationController
   # [GET] /api/v1/users/:id/messages
   def messages
     @user = User.find(params[:id])
-    @sent = Message.sent_from(@user)
-    @received = Message.sent_to(@user)
+    @sent = Message.sent_from(@user).ordered
+    @received = Message.sent_to(@user).ordered
     respond_to do |format|
       format.json { render :json => {sent: @sent, received: @received} }
     end

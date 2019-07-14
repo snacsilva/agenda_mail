@@ -73,8 +73,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       end
   
       it 'show user received messages' do
-        get :messages, params: {id: user.id}
-        p response.body
+        get :messages, params: {id: user.id}, format: :json
         expect(assigns(:received)).to eq [message]
       end
     end
