@@ -53,7 +53,7 @@ bundle exec rails db:setup
 
   `POST` | `/messages` | `message[title]=string&message[content]=string`
 
-  example: `curl -X POST '/api/v1/messages' -d 'message[receiver_email]=matheus@email.com&message[title]=APITEST&message[content]=CONTEUDO&token=XXX'`
+  example: `curl -X POST '/api/v1/messages' -d 'message[receiver_email]=samantha@email.com&message[title]=APITEST&message[content]=CONTEUDO&token=XXX'`
 
 * **Sent**
 

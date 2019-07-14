@@ -4,7 +4,7 @@ class Api::V1::MessagesController < ApplicationController
     before_action :validate_permission, only: [:create,:sent]
 
     # [API] creates a new message 
-    # api/v1/create
+    # [POST] /api/v1/messages/
     def create
         user = User.find_by_email(message_params[:receiver_email])
         @message = Message.new(message_params.merge(from: @user.id))
@@ -21,7 +21,7 @@ class Api::V1::MessagesController < ApplicationController
     end
   
     # [API] index checks if user has master permission
-    # api/v1/index
+    # [GET] /api/v1/messages
     def index
         @messages = params[:permission] == 'master' ? Message.master_messages.ordered : Message.sent_to(@user).ordered
         respond_to do |format|
@@ -31,7 +31,7 @@ class Api::V1::MessagesController < ApplicationController
 
 
     # [API] shows content of the message
-    # api/v1/show
+    # [GET] /api/v1/messages/:id
     def show
         @message = Message.find(params[:id])
         if @message.receiver == @user || params[:permission] == 'master'
@@ -47,7 +47,7 @@ class Api::V1::MessagesController < ApplicationController
     end
 
     # [API] archive a single message by id
-    # api/v1/archive
+    # [PATCH] /api/v1/messages/:id/archive
     def archive
         @message = Message.find(params[:id])
         if @message.archived? || @message.receiver != @user
@@ -61,7 +61,7 @@ class Api::V1::MessagesController < ApplicationController
     end
 
     # [API] achive multiples messages by sending multiple ids
-    # api/v1/archive_multiple
+    # [GET] /api/v1/messages/archive_multiple
     def archive_multiple
         messages = Message.find(params[:message_ids])
         messages.each do |message|
@@ -73,7 +73,7 @@ class Api::V1::MessagesController < ApplicationController
     end
     
     # [API] get all messages that current_user sent
-    # api/v1/sent
+    # [GET] /api/v1/messages/sent
     def sent
         @messages = Message.sent_from(@user).ordered
         respond_to do |format|
@@ -82,7 +82,7 @@ class Api::V1::MessagesController < ApplicationController
     end
 
     # [API] get all archived messages from the application
-    # api/v1/archived
+    # [GET] /api/v1/messages/archived
     def archived
         @messages = Message.archived.ordered
         respond_to do |format|
