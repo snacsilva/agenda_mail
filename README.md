@@ -1,6 +1,15 @@
 ## Documentação
 ----
 
+## Demo
+----
+
+https://mail-agenda.herokuapp.com/
+
+Pegar o token no perfil do usuário para testes com a Api.
+
+
+----
 **Agenda Mail**
 ----
 
@@ -11,6 +20,14 @@ Possui usuario master, que pode visualizar todas as mensangens, inclusive arquiv
 Usuario Master:
 
 email: master@email.com
+
+password: 123456
+
+E possui também um usuário normal, para realização dos testes.
+
+Usuário Normal:
+
+email: samantha@email.com
 
 password: 123456
 
