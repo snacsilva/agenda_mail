@@ -176,13 +176,13 @@ RSpec.describe Api::V1::MessagesController, type: :controller do
 
   # end
 
-  # def create_message
-  #   post :create, params:
-  #         {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem', receiver_email: user1.email}}
-  # end
+end
+def create_message
+  post :create, params:
+        {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem', receiver_email: user1.email}, token: '123456'}
+end
 
-  # def create_invalid_message
-  #   post :create, params:
-  #         {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem'}}
-  # end
+def create_invalid_message
+  post :create, params:
+        {message: {title: 'Mensagem 1', content: 'Conteudo da mensagem'}, token: '123456'}
 end
